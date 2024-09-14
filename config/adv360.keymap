@@ -12,8 +12,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -39,7 +41,7 @@
             bindings = <
 &kp CAPSLOCK  &kp N1     &kp N2      &kp N3      &kp N4        &kp N5  &kp MINUS                                                                         &kp EQUAL  &kp N6  &kp N7          &kp N8          &kp N9        &kp N0           &kp BACKSPACE
 &kp TAB       &kp Q      &kp W       &kp E       &kp R         &kp T   &kp PAGE_UP                                                                       &kp HOME   &kp Y   &kp U           &kp I           &kp O         &kp P            &kp LEFT_BRACE
-&kp ESC       &kp A      &kp S       &kp D       &kp F         &kp G   &kp PAGE_DOWN  &mo 3           &mo 5             &mo 6             &mo 4          &kp END    &kp H   &kp J           &kp K           &kp L         &kp SEMI         &kp SQT
+&kp ESC       &kp A      &kp S       &kp D       &kp F         &kp G   &kp PAGE_DOWN  &mo 5           &mo 6             &mo 3             &mo 4          &kp END    &kp H   &kp J           &kp K           &kp L         &kp SEMI         &kp SQT
 &kp C_MENU    &kp Z      &kp X       &kp C       &kp V         &kp B                                  &mo 1             &mo 2                                       &kp N   &kp M           &kp COMMA       &kp DOT       &kp FSLH         &kp RIGHT_SHIFT
 &mo 7         &kp GRAVE  &kp INSERT  &kp DELETE  &kp LEFT_WIN          &kp SPACE      &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LEFT_CONTROL  &kp BACKSPACE  &kp ENTER          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 8
             >;
@@ -65,19 +67,19 @@
             >;
         };
 
-        Mouse {
+        system_functions {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader                                            &trans                &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &none         &none         &bootloader                                            &bootloader           &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD  &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &macro_ver    &none                             &none      &none                                         &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG              &bl BL_INC  &bl BL_DEC  &bl BL_TOG  &none  &none
+&bt BT_CLR      &bt BT_SEL 0                          &bt BT_SEL 1                          &bt BT_SEL 2                      &bt BT_SEL 3                            &bt BT_SEL 4  &out OUT_TOG                                                          &out OUT_TOG    &kp C_PLAY      &kp C_PAUSE   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_POWER       &ext_power EP_ON
+&kp SCROLLLOCK  &kp C_KEYBOARD_INPUT_ASSIST_CANCEL    &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS  &kp C_KEYBOARD_INPUT_ASSIST_NEXT  &kp C_KEYBOARD_INPUT_ASSIST_ACCEPT      &none         &kp C_AL_MY_COMPUTER                                                  &kp C_AL_MAIL   &kp C_STOP      &kp C_VOL_UP  &kp C_AC_REFRESH      &kp C_AC_STOP         &kp C_SLEEP_MODE  &ext_power EP_OFF
+&kp CAPSLOCK    &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS  &kp PRINTSCREEN                       &kp C_AC_PRINT                    &kp C_KEYBOARD_INPUT_ASSIST_NEXT_GROUP  &none         &kp K_CALCULATOR      &kp        &kp           &bt BT_CLR  &kp        &kp C_AL_MUSIC  &kp C_PREVIOUS  &kp C_VOL_DN  &kp C_AC_FAVORITES    &kp C_AC_SEARCH       &kp C_AL_LOCK     &kp C_AC_PRINT
+&kp KP_NUMLOCK  &kp LANG1                             &kp LANG2                             &kp LANG3                         &kp LANG4                               &kp LANG5                                      &kp           &kp                                    &kp C_NEXT      &kp C_MUTE    &kp C_AC_BACK         &kp C_AC_FORWARD      &kp C_AC_HOME     &kp
+&sys_reset      &bootloader                           &kp                                   &kp                               &kp                                                   &kp SPACE             &kp LSHFT  &kp LALT      &kp LCTRL   &kp RSHFT  &kp RET                         &bl BL_INC    &bl BL_DEC            &bl BL_TOG            &bootloader       &sys_reset
             >;
         };
 
-        layer_4 {
+        number_row {
             bindings = <
-&trans  &trans            &trans            &trans            &trans            &trans            &trans                                         &trans     &trans            &trans            &trans            &trans      &trans            &trans
+&trans  &trans            &trans            &trans            &trans            &trans            &trans                                         &trans     &trans            &trans            &kp SLASH         &trans      &trans            &trans
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp MINUS                                      &kp MINUS  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(N9)  &kp LS(NUMBER_0)  &trans
 &trans  &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5            &kp EQUAL  &trans  &trans      &trans  &trans  &kp EQUAL  &kp NUMBER_6      &kp N7            &kp N8            &kp N9      &kp N0            &trans
 &trans  &kp A             &kp B             &kp C             &kp D             &kp E                                &trans      &trans                     &kp A             &kp B             &kp C             &kp D       &kp E             &trans
@@ -85,7 +87,7 @@
             >;
         };
 
-        layer_5 {
+        brackets {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans     &trans     &trans                &trans                 &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans     &kp SQT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans  &trans
@@ -95,7 +97,7 @@
             >;
         };
 
-        layer_6 {
+        app_shortcuts {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
