@@ -47,21 +47,21 @@
 
         layer_keypad {
             bindings = <
-&kp EQUAL  &to 1      &to 2     &to 3     &to 4      &to 5  &trans                                                   &mo 3      &to 6           &to 7           &to 8         &to 9            &to 0         &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &none                                                    &none      &kp Y           &kp KP_N7       &kp KP_N8     &kp KP_N9        &kp KP_MINUS  &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mkp RCLK     &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                       &kp HOME      &kp PG_UP                        &kp N           &kp KP_N1       &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT         &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                  &mkp LCLK       &kp DOWN      &kp KP_DOT       &kp RBKT      &mo 2
+&kp EQUAL  &to 1      &to 2     &to 3                 &to 4                  &to 5  &kp INSERT                                                 &kp SCROLLLOCK  &to 6                   &to 7           &to 8          &to 9              &to 0         &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp T  &kp LG(X)                                                  &kp LG(TAB)     &kp LC(LG(LEFT_ARROW))  &kp LC(LG(F4))  &kp LC(LG(D))  &kp LC(LG(RIGHT))  &kp KP_MINUS  &kp BSLH
+&kp ESC    &kp A      &kp S     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp G  &kp C_MENU  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp LA(TAB)     &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW    &mkp RCLK     &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp B                         &kp HOME      &kp PG_UP                             &kp N                   &kp KP_N1       &kp KP_N2      &kp KP_N3          &kp KP_ENTER  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LESS_THAN         &kp GREATER_THAN              &kp BSPC    &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                               &mkp LCLK       &kp HOME       &kp PAGE_DOWN      &kp RBKT      &kp END
             >;
         };
 
         layer_fn {
             bindings = <
-&kp BACKSPACE      &kp F1     &kp F2          &kp F3     &kp F4      &kp F5   &tog 1                                      &mo 3   &kp F6   &kp F7         &kp F8         &kp F9   &kp F10  &kp DELETE
-&kp LS(TAB)        &kp GRAVE  &kp LEFT_WIN    &kp TAB    &kp ESCAPE  &trans   &none                                       &none   &trans   &kp SLASH      &kp BACKSLASH  &trans   &trans   &kp RIGHT_BRACE
-&kp CAPSLOCK       &trans     &kp UNDERSCORE  &kp MINUS  &kp EQUAL   &trans   &none   &trans  &trans      &trans  &trans  &none   &trans   &kp SEMICOLON  &kp COLON      &trans   &trans   &trans
-&kp RIGHT_CONTROL  &kp F11    &kp F12         &kp F13    &kp F14     &kp F15                  &trans      &trans                  &kp F16  &kp F17        &kp F18        &kp F19  &kp F20  &trans
-&trans             &trans     &trans          &trans     &trans               &trans  &trans  &trans      &trans  &trans  &trans           &trans         &trans         &trans   &trans   &trans
+&kp BACKSPACE      &kp F1     &kp F2          &kp F3     &kp F4      &kp F5   &kp HOME                                      &kp END  &kp F6         &kp F7         &kp F8         &kp F9   &kp F10  &kp DELETE
+&kp LS(TAB)        &kp GRAVE  &kp LEFT_WIN    &kp TAB    &kp ESCAPE  &trans   &none                                         &none    &kp PAGE_UP    &kp SLASH      &kp BACKSLASH  &trans   &trans   &kp RIGHT_BRACE
+&kp CAPSLOCK       &trans     &kp UNDERSCORE  &kp MINUS  &kp EQUAL   &trans   &none     &trans  &trans      &trans  &trans  &none    &kp PAGE_DOWN  &kp SEMICOLON  &kp COLON      &trans   &trans   &kp RIGHT_SHIFT
+&kp RIGHT_CONTROL  &kp F11    &kp F12         &kp F13    &kp F14     &kp F15                    &trans      &trans                   &kp F16        &kp F17        &kp F18        &kp F19  &kp F20  &kp RIGHT_ALT
+&trans             &trans     &trans          &trans     &trans               &trans    &trans  &trans      &trans  &trans  &trans                  &trans         &trans         &trans   &trans   &trans
             >;
         };
 
