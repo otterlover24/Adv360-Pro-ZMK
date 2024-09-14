@@ -47,11 +47,11 @@
 
         layer_keypad {
             bindings = <
-&kp EQUAL  &to 1      &to 2     &to 3                 &to 4                  &to 5  &kp INSERT                                                 &kp SCROLLLOCK  &to 6                   &to 7           &to 8          &to 9              &to 0         &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp T  &kp LG(X)                                                  &kp LG(TAB)     &kp LC(LG(LEFT_ARROW))  &kp LC(LG(F4))  &kp LC(LG(D))  &kp LC(LG(RIGHT))  &kp KP_MINUS  &kp BSLH
-&kp ESC    &kp A      &kp S     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp G  &kp C_MENU  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp LA(TAB)     &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW    &mkp RCLK     &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp B                         &kp HOME      &kp PG_UP                             &kp N                   &kp KP_N1       &kp KP_N2      &kp KP_N3          &kp KP_ENTER  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LESS_THAN         &kp GREATER_THAN              &kp BSPC    &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                               &mkp LCLK       &kp HOME       &kp PAGE_DOWN      &kp RBKT      &kp END
+&kp EQUAL  &to 1        &to 2          &to 3               &to 4                      &to 5      &kp INSERT                                                                         &kp SCROLLLOCK  &to 6                   &to 7           &to 8          &to 9              &to 0         &kp MINUS
+&kp TAB    &kp LC(Q)    &none          &kp LC(I)           &kp LC(Y)                  &none      &kp LG(X)                                                                          &kp LG(TAB)     &kp LC(LG(LEFT_ARROW))  &kp LC(LG(F4))  &kp LC(LG(D))  &kp LC(LG(RIGHT))  &kp KP_MINUS  &kp BSLH
+&kp ESC    &none        &none          &kp LC(Z)           &kp LC(RIGHT_PARENTHESIS)  &none      &kp C_MENU    &mo 3           &mo 5             &mo 6             &mo 4            &kp LA(TAB)     &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW    &mkp RCLK     &kp SQT
+&kp LSHFT  &none        &none          &kp LC(LEFT_BRACE)  &kp LC(RIGHT_BRACE)        &kp LC(B)                                &mo 1             &kp C_MENU                                         &kp N                   &kp KP_N1       &kp KP_N2      &kp KP_N3          &kp KP_ENTER  &kp RSHFT
+&kp HOME   &kp PAGE_UP  &kp PAGE_DOWN  &kp END             &kp C_MENU                            &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LEFT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_WIN                           &mkp LCLK       &kp HOME       &kp PAGE_DOWN      &kp RBKT      &kp END
             >;
         };
 
