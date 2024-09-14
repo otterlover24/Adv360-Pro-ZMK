@@ -67,11 +67,11 @@
 
         layer_mod {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader                                            &trans                  &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none       &none  &none
-&none       &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &bl BL_TOG  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader                                            &trans                &none  &none       &none       &none       &none  &none
+&none       &none         &none         &none         &none         &none         &bootloader                                            &bootloader           &none  &none       &none       &none       &none  &none
+&none       &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD  &none  &none       &none       &none       &none  &none
+&none       &none         &none         &none         &macro_ver    &none                             &none      &none                                         &none  &none       &none       &none       &none  &none
+&none       &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG              &bl BL_INC  &bl BL_DEC  &bl BL_TOG  &none  &none
             >;
         };
 
@@ -87,11 +87,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans     &trans     &trans                &trans                 &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans     &kp SQT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans     &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                              &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp RIGHT_SHIFT  &kp ENTER             &kp LESS_THAN         &kp GREATER_THAN       &trans             &trans  &trans
             >;
         };
 
