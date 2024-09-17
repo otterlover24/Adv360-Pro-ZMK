@@ -48,11 +48,11 @@
 
         Arrows_layer {
             bindings = <
-&kp EQUAL  &to 1           &to 2          &to 3      &to 4                      &to 5           &kp INSERT                                                                                 &kp SCROLLLOCK  &to 6                   &to 7           &to 8          &to 0              &to 0         &kp MINUS
-&kp TAB    &kp LC(GRAVE)   &none          &kp LC(I)  &kp LC(Y)                  &kp LC(B)       &kp LG(X)                                                                                  &kp LG(TAB)     &kp LC(LG(LEFT_ARROW))  &kp LC(LG(F4))  &kp LC(LG(D))  &kp LC(LG(RIGHT))  &kp KP_MINUS  &kp BSLH
-&kp ESC    &kp LA(ESCAPE)  &kp LG(S)      &kp LC(Z)  &kp LC(RIGHT_PARENTHESIS)  &kp LG(PERIOD)  &kp K_CONTEXT_MENU  &mo 5           &mo 6             &mo 3               &mo 4            &kp LA(TAB)     &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW    &mkp RCLK     &kp SQT
-&kp LSHFT  &to 1           &to 2          &to 3      &to 4                      &to 5                                               &mo 1             &kp K_CONTEXT_MENU                                   &to 6                   &to 7           &to 8          &to 9              &to 0         &kp RSHFT
-&kp HOME   &kp PAGE_UP     &kp PAGE_DOWN  &kp END    &kp K_CONTEXT_MENU                         &kp LEFT_WIN        &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LEFT_CONTROL    &kp RIGHT_SHIFT  &kp RIGHT_WIN                           &mkp LCLK       &kp HOME       &kp PAGE_DOWN      &kp PAGE_UP   &kp END
+&kp EQUAL  &to 1           &to 2                &to 3      &to 4                      &to 5           &kp INSERT                                                                                 &kp SCROLLLOCK  &to 6                   &to 7           &to 8          &to 0              &to 0         &kp MINUS
+&kp TAB    &kp LC(GRAVE)   &kp RC(RIGHT_SHIFT)  &kp LC(I)  &kp LC(Y)                  &kp LC(B)       &kp LG(X)                                                                                  &kp LG(TAB)     &kp LC(LG(LEFT_ARROW))  &kp LC(LG(F4))  &kp LC(LG(D))  &kp LC(LG(RIGHT))  &kp KP_MINUS  &kp BSLH
+&kp ESC    &kp LA(ESCAPE)  &kp PRINTSCREEN      &kp LC(Z)  &kp LC(RIGHT_PARENTHESIS)  &kp LG(PERIOD)  &kp K_CONTEXT_MENU  &mo 5           &mo 6             &mo 3               &mo 4            &kp LA(TAB)     &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW    &mkp RCLK     &kp SQT
+&kp LSHFT  &to 1           &to 2                &to 3      &to 4                      &to 5                                               &mo 1             &kp K_CONTEXT_MENU                                   &to 6                   &to 7           &to 8          &to 9              &to 0         &kp RSHFT
+&kp HOME   &kp PAGE_UP     &kp PAGE_DOWN        &kp END    &kp K_CONTEXT_MENU                         &kp LEFT_WIN        &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LEFT_CONTROL    &kp RIGHT_SHIFT  &kp RIGHT_WIN                           &mkp LCLK       &kp HOME       &kp PAGE_DOWN      &kp PAGE_UP   &kp END
             >;
         };
 
@@ -72,7 +72,7 @@
 &kp SCROLLLOCK  &kp C_KEYBOARD_INPUT_ASSIST_CANCEL    &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS  &kp C_KEYBOARD_INPUT_ASSIST_NEXT  &kp C_KEYBOARD_INPUT_ASSIST_ACCEPT      &kp RA(RG(R))                         &kp C_AL_MY_COMPUTER                                                 &kp C_AL_MAIL   &kp C_STOP      &kp C_VOL_UP  &kp C_AC_REFRESH      &kp C_AC_STOP         &kp C_SLEEP_MODE  &ext_power EP_OFF
 &kp CAPSLOCK    &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS  &kp PRINTSCREEN                       &kp C_AC_PRINT                    &kp C_KEYBOARD_INPUT_ASSIST_NEXT_GROUP  &kp RG(G)                             &kp K_CALCULATOR      &none      &none         &none      &none      &kp C_AL_MUSIC  &kp C_PREVIOUS  &kp C_VOL_DN  &kp C_AC_FAVORITES    &kp C_AC_SEARCH       &kp C_AL_LOCK     &kp C_AC_PRINT
 &kp KP_NUMLOCK  &kp LANG1                             &kp LANG2                             &kp LANG3                         &kp LC(SPACE)                           &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT                                   &none         &none                                 &kp C_NEXT      &kp C_MUTE    &kp C_AC_BACK         &kp C_AC_FORWARD      &kp C_AC_HOME     &none
-&sys_reset      &bootloader                           &none                                 &none                             &none                                                                         &kp SPACE             &kp LSHFT  &kp LALT      &kp LCTRL  &kp RSHFT  &kp RET                         &bl BL_INC    &bl BL_DEC            &bl BL_TOG            &bootloader       &sys_reset
+&sys_reset      &bootloader                           &none                                 &none                             &kp PRINTSCREEN                                                               &kp SPACE             &kp LSHFT  &kp LALT      &kp LCTRL  &kp RSHFT  &kp RET                         &bl BL_INC    &bl BL_DEC            &bl BL_TOG            &bootloader       &sys_reset
             >;
         };
 
