@@ -9,13 +9,14 @@
  * edit it directly.
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -30,6 +31,15 @@
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+    };
+
+    macros {
+        type_READONLY: type_READONLY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(R) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(O) &kp LS(N) &kp LS(L) &kp LS(Y)>;
+            label = "TYPE_READONLY";
         };
     };
 
@@ -88,11 +98,11 @@
 
         brackets {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans     &trans     &trans                &trans                 &trans             &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans     &kp SQT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans     &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &mo 1       &mo 2                               &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp RIGHT_SHIFT  &kp ENTER             &kp LESS_THAN         &kp GREATER_THAN       &trans             &trans  &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans                                               &trans     &trans     &type_READONLY        &trans                 &trans             &trans  &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans                                               &trans     &kp SQT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans  &trans
+&trans  &trans  &trans  &type_READONLY  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans     &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &trans  &trans
+&trans  &trans  &trans  &trans          &trans  &trans                  &mo 1       &mo 2                               &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans  &trans
+&trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans      &trans  &kp RIGHT_SHIFT  &kp ENTER             &kp LESS_THAN         &kp GREATER_THAN       &trans             &trans  &trans
             >;
         };
 
