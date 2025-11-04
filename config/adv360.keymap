@@ -41,6 +41,34 @@
             bindings = <&kp LS(R) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(O) &kp LS(N) &kp LS(L) &kp LS(Y)>;
             label = "TYPE_READONLY";
         };
+
+        type_THINK_QUICKLY: type_THINK_QUICKLY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp LS(H) &kp LS(I) &kp LS(N) &kp LS(K) &kp SPACE &kp LS(Q) &kp LS(U) &kp LS(I) &kp LS(C) &kp LS(K) &kp LS(L) &kp LS(Y)>;
+            label = "TYPE_THINK_QUICKLY";
+        };
+
+        type_THINK_DEEPLY: THINK_DEEPLY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(T) &kp LS(H) &kp LS(I) &kp LS(N) &kp LS(K) &kp SPACE &kp LS(D) &kp LS(E) &kp LS(E) &kp LS(P) &kp LS(L) &kp LS(Y)>;
+            label = "THINK_DEEPLY";
+        };
+
+        type_BE_CONCISE: type_BE_CONCISE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(B) &kp LS(E) &kp SPACE &kp LS(C) &kp LS(O) &kp LS(N) &kp LS(C) &kp LS(I) &kp LS(S) &kp LS(E)>;
+            label = "TYPE_BE_CONCISE";
+        };
+
+        type_BE_VERBOSE: type_BE_VERBOSE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(B) &kp LS(E) &kp SPACE &kp LS(V) &kp LS(E) &kp LS(R) &kp LS(B) &kp LS(O) &kp LS(S) &kp LS(E)>;
+            label = "TYPE_BE_VERBOSE";
+        };
     };
 
     keymap {
@@ -98,11 +126,11 @@
 
         brackets {
             bindings = <
-&trans  &trans  &trans  &trans          &trans  &trans  &trans                                               &trans     &trans     &type_READONLY        &trans                 &trans             &trans  &trans
-&trans  &trans  &trans  &trans          &trans  &trans  &trans                                               &trans     &kp SQT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans  &trans
-&trans  &trans  &trans  &type_READONLY  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans     &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &trans  &trans
-&trans  &trans  &trans  &trans          &trans  &trans                  &mo 1       &mo 2                               &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans  &trans
-&trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans      &trans  &kp RIGHT_SHIFT  &kp ENTER             &kp LESS_THAN         &kp GREATER_THAN       &trans             &trans  &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans                                               &trans     &type_READONLY  &type_THINK_QUICKLY   &type_THINK_DEEPLY     &type_BE_CONCISE   &type_BE_VERBOSE  &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans                                               &trans     &kp SQT         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans            &trans
+&trans  &trans  &trans  &type_READONLY  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans     &kp SLASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &trans            &trans
+&trans  &trans  &trans  &trans          &trans  &trans                  &mo 1       &mo 2                               &trans          &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans            &trans
+&trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans      &trans  &kp RIGHT_SHIFT  &kp ENTER                  &kp LESS_THAN         &kp GREATER_THAN       &trans             &trans            &trans
             >;
         };
 
